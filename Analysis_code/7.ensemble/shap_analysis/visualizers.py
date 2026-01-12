@@ -17,6 +17,12 @@ from .preprocessors import PreprocessingUtils
 class SHAPVisualizer:
     """SHAP 시각화를 담당하는 클래스."""
     
+    # Feature 이름 매핑 딕셔너리 (plot 표시용)
+    FEATURE_NAME_MAPPING = {
+        'hm': 'relative_humidity',
+        'PM25': 'PM2.5'
+    }
+    
     def __init__(self, config: SHAPConfig):
         self.config = config
     
@@ -48,14 +54,16 @@ class SHAPVisualizer:
     ) -> List[str]:
         """Feature names에 영향도 퍼센트를 추가합니다."""
         if importance_data is None or importance_data.df is None:
-            return feature_names
+            # 매핑만 적용 (share 없이)
+            return [self.FEATURE_NAME_MAPPING.get(f, f) for f in feature_names]
         
         # importance_df는 이미 importance 순으로 정렬되어 있음
         importance_df = importance_data.df.copy()
         total_importance = importance_df['importance'].sum()
         
         if total_importance == 0:
-            return feature_names
+            # 매핑만 적용 (share 없이)
+            return [self.FEATURE_NAME_MAPPING.get(f, f) for f in feature_names]
         
         # feature -> share 매핑 생성
         feature_to_share = {}
@@ -64,14 +72,17 @@ class SHAPVisualizer:
             share = (row['importance'] / total_importance) * 100
             feature_to_share[feature] = share
         
-        # feature_names 순서를 유지하면서 share 추가
+        # feature_names 순서를 유지하면서 share 추가 및 이름 매핑 적용
         result_names = []
         for feature in importance_df['feature'].tolist():
+            # feature 이름 매핑 적용 (hm -> relative_humidity)
+            display_name = self.FEATURE_NAME_MAPPING.get(feature, feature)
+            
             if feature in feature_to_share:
                 share = feature_to_share[feature]
-                result_names.append(f"{feature} ({share:.1f}%)")
+                result_names.append(f"{display_name} ({share:.1f}%)")
             else:
-                result_names.append(feature)
+                result_names.append(display_name)
         
         return result_names
     

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 데이터 시각화 모듈: Original과 Synthetic 데이터 비교 시각화
 
@@ -594,7 +595,7 @@ def generate_all_plots(
                     # 저장 (논문 게재 품질)
                     fig.savefig(
                         filepath, 
-                        dpi=600,                    # 해상도 (300dpi는 대부분 저널 요구사항)
+                        dpi=300,                    # 해상도 (300dpi는 대부분 저널 최저 요구사항)
                         bbox_inches='tight',        # 여백 자동 제거
                         pad_inches=0.1,             # tight일 때 약간의 여백 유지 (가독성)
                         facecolor='white',          # 배경색 (흰색)
@@ -656,7 +657,7 @@ def generate_all_plots(
                     # 저장 (논문 게재 품질)
                     fig.savefig(
                         filepath, 
-                        dpi=300,                    # 해상도 (300dpi는 대부분 저널 요구사항)
+                        dpi=300,                    # 해상도 (300dpi는 대부분 저널 최저 요구사항)
                         bbox_inches='tight',        # 여백 자동 제거
                         pad_inches=0.1,             # tight일 때 약간의 여백 유지 (가독성)
                         facecolor='white',          # 배경색 (흰색)
