@@ -154,6 +154,7 @@ def main() -> None:
     external_hrefs = {attrs["href"] for tag, attrs in parser.tags if tag == "a" and attrs.get("href", "").startswith("https://")}
     assert "https://doi.org/10.1007/s00704-026-06219-6" in external_hrefs
     assert "https://github.com/Bon99yun/Visibility_Nowcasting" in external_hrefs
+    assert "https://www.linkedin.com/in/bong-gyun-shin-63a75b36a" in external_hrefs
 
     assert "assets/og/visibility-nowcasting-og.svg" not in index_text, "removed custom SVG OG card should not be referenced"
     assert "https://bon99yun.github.io/Visibility_Nowcasting/assets/figure/framework.png" in index_text, "OG/Twitter image should use the framework figure"
