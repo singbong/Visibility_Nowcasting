@@ -1,0 +1,7 @@
+{
+  "tool_name": "Read",
+  "tool_input_preview": "{\"file_path\":\"/home/bong/bong/Visibility_Nowcasting/.omc/artifacts/ask/codex-test-every-interactive-button-and-link-on-the-project-page-u-2026-05-22T05-47-34-136Z.md\"}",
+  "error": "File content (518.7KB) exceeds maximum allowed size (256KB). Use offset and limit parameters to read specific portions of the file, or search for specific content instead of reading the whole file.",
+  "timestamp": "2026-05-22T05:47:42.084Z",
+  "retry_count": 1
+}
