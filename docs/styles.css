@@ -121,7 +121,8 @@ p { color: var(--muted); font-size: 1.16rem; line-height: 1.82; }
 }
 .author-block { width: fit-content; max-width: 100%; margin: 22px auto 0; }
 .author-block p { margin: 0; color: var(--text); }
-.author-link {
+.author-link,
+.publication-doi {
   color: inherit;
   text-decoration: underline;
   text-decoration-color: rgba(15, 159, 110, 0.22);
@@ -130,7 +131,9 @@ p { color: var(--muted); font-size: 1.16rem; line-height: 1.82; }
   transition: color 160ms ease, text-decoration-color 160ms ease;
 }
 .author-link:hover,
-.author-link:focus-visible {
+.author-link:focus-visible,
+.publication-doi:hover,
+.publication-doi:focus-visible {
   color: #0f6f50;
   text-decoration-color: rgba(15, 159, 110, 0.78);
   outline: none;

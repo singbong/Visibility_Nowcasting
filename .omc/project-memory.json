@@ -1,0 +1,100 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1779415825081,
+  "projectRoot": "/home/bong/bong/Visibility_Nowcasting",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "Analysis_code": {
+      "path": "Analysis_code",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1779415825080,
+      "keyFiles": []
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 4,
+      "lastAccessed": 1779415825080,
+      "keyFiles": [
+        "index.html",
+        "robots.txt",
+        "styles.css"
+      ]
+    },
+    "Analysis_code/models": {
+      "path": "Analysis_code/models",
+      "purpose": "Data models",
+      "fileCount": 4,
+      "lastAccessed": 1779415825080,
+      "keyFiles": [
+        "__init__.py",
+        "deepgbm.py",
+        "ft_transformer.py"
+      ]
+    },
+    "docs/assets": {
+      "path": "docs/assets",
+      "purpose": "Static assets",
+      "fileCount": 1,
+      "lastAccessed": 1779415825081,
+      "keyFiles": [
+        "favicon.svg"
+      ]
+    },
+    "docs/tests": {
+      "path": "docs/tests",
+      "purpose": "Test files",
+      "fileCount": 1,
+      "lastAccessed": 1779415825081,
+      "keyFiles": [
+        "static_site_check.py"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "docs/styles.css",
+      "accessCount": 4,
+      "lastAccessed": 1779426813272,
+      "type": "file"
+    },
+    {
+      "path": "docs/index.html",
+      "accessCount": 3,
+      "lastAccessed": 1779426709423,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
